@@ -1,0 +1,21 @@
+callbacks
+include:
+#include "s3eTypes.h"
+
+enum HeyzapMarmaladeCallback
+{
+	HEYZAPMARMALADE_CALLBACK_HEYZAPWILLAPPEAR,
+	HEYZAPMARMALADE_CALLBACK_HEYZAPDIDAPPEAR,
+	HEYZAPMARMALADE_CALLBACK_HEYZAPWILLDISAPPEAR,
+	HEYZAPMARMALADE_CALLBACK_HEYZAPDIDDISAPPEAR,
+	HEYZAPMARMALADE_CALLBACK_MAX
+};
+
+functions:
+
+// When adding functions be careful. You need to maintain the order I believe by using the order = 1 directive etc.
+
+void loadHeyzap(const char* appId, const char* appURL, bool androidToast) void run_on_os_thread
+
+void checkinHeyzap() void run_on_os_thread
+void checkinHeyzapWithMessage(const char* message) void run_on_os_thread

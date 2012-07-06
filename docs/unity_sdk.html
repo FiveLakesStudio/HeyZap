@@ -1,0 +1,592 @@
+<html >
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+    <title>Heyzap Mobile SDK</title> 
+
+    <style>
+    * {
+        margin:0;
+        padding:0;
+    }
+
+    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+        margin: 0;
+        padding: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        border: 0;
+        outline: 0;
+        background: transparent;
+    }
+
+    html, body {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        height: 100%;
+    }
+
+    ol, ul {
+        list-style: none;
+    }
+
+    blockquote, q {
+        quotes: none;
+    }
+
+    :focus {
+        outline: 0;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    .group:after {
+        content: "."; 
+        display: block; 
+        height: 0; 
+        clear: both; 
+        visibility: hidden;
+    }
+
+    body {
+        font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', serif;
+        font-size: 62.5%;
+    }
+
+    ul {
+        list-style: disc;
+        margin-top: 10px;
+    }
+
+    ol {
+        list-style: decimal;
+    }
+
+    ul li, ol li {
+        margin-left: 30px;
+        margin-bottom: 3px;
+    }
+
+    ol li {
+        margin-bottom: 12px;
+    }
+
+    dt {
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    dd {
+        margin-bottom: 20px;
+        margin-left: 20px;
+        margin-top: 5px;
+    }
+
+    p {
+      margin: 20px 0;
+    }
+
+    blockquote {
+      padding-left: 20px;
+      font-style: italic;
+    }
+
+    #site-header {
+      color: #000;
+      text-align: center;
+      font-size: 3em;
+    }
+
+    #site-header a {
+      color: #000;
+      padding: 20px;
+      display: block;
+      text-decoration: none;
+    }
+
+    #wrap {
+        width: 700px;
+        margin: 0 auto;
+        font-size: 1.5em;
+        padding: 20px;
+    }
+
+    #header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #header h1 {
+        font-size: 1.8em;
+    }
+
+    #header h2 {
+        font-size: 1.1em;
+        font-weight: normal;
+    }
+
+    #share {
+      text-align: center;
+    }
+
+    #share ul {
+        width: 350px;
+        margin: 0 auto;
+    }
+
+    #share ul li {
+        list-style-type: none;
+        float: left;
+        margin: 0;
+        width: 110px;
+        text-align: center;
+    }
+
+    #post, #project {
+      margin-bottom: 40px;
+    }
+
+    #home h2, #post h2, #project h2 {
+      font-size: 1.3em;
+      margin: 30px 0 15px 0;
+    }
+
+    #home h3, #post h3, #project h3 {
+      margin: 25px 0 10px 0;
+    }
+
+    #home h4, #post h4, #project h4 {
+      margin: 5px 0 10px 0;
+      color: #666;
+      font-size: 0.9em;
+    }
+
+    .highlight {
+      border: 1px solid #ddd;
+      padding: 10px;
+      overflow: hidden;
+    }
+
+    .download-button {
+        background: #7fbf4d;
+        background: -moz-linear-gradient(0% 100% 90deg,#63a62f, #7fbf4d);
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7fbf4d), to(#63a62f));
+        border: 1px solid #63a62f;
+        border-bottom: 1px solid #5b992b;
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
+        border-radius: 8px;
+        -moz-box-shadow: inset 0 1px 0 0 #96ca6d;
+        -webkit-box-shadow: inset 0 1px 0 0 #96ca6d;
+        box-shadow: inset 0 1px 0 0 #96ca6d;
+        color: #fff;
+        font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1;
+        padding: 10px 20px;
+        text-align: center;
+        text-shadow: 0 -1px 0 #4c9021;
+    }
+
+    .download-button:hover {
+        background: #76b347;
+        background: -moz-linear-gradient(0% 100% 90deg,#5e9e2e, #76b347);
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#76b347), to(#5e9e2e));
+        -moz-box-shadow: inset 0 1px 0 0 #8dbf67;
+        -webkit-box-shadow: inset 0 1px 0 0 #8dbf67;
+        box-shadow: inset 0 1px 0 0 #8dbf67;
+        cursor: pointer;
+    }
+
+    .download-button:active {
+        border: 1px solid #5b992b;
+        border-bottom: 1px solid #538c27;
+        -moz-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eee;
+        -webkit-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eee;
+        box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eee;
+    }
+
+    .download-button a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .download-button em {
+        display: block;
+        margin-top: 8px;
+        font-weight: normal;
+        font-size: 0.5em;
+    }
+
+    .section {
+        margin-bottom: 30px;
+    }
+
+    .section h3 {
+        margin-bottom: 3px;
+    }
+
+    .social-grill {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .social-grill span {
+        line-height: 32px;
+        margin-right: 20px;
+        font-size: 0.9em;
+    }
+
+    .social-grill img {
+        width: 32px;
+        height: 32px;
+        vertical-align: middle;
+    }
+
+    .social-grill a {
+        text-decoration: none;
+        color: black;
+    }
+
+    #instant-demo {
+        float: left;
+        width: 48%;
+    }
+
+    #demo-details {
+        font-size: 0.8em;
+    }
+
+    #download {
+        float: right;
+        margin: 30px 0;
+        width: auto;
+    }
+
+    #github {
+        text-align: center;
+        font-size: 0.9em;
+        margin: 5px 0;
+    }
+
+    pre  {
+      padding: 5px;
+      background-color: #eee;
+      line-height: 2em;
+    }
+
+    .highlight .hll { background-color: #ffffcc }
+    .highlight  { background: #f8f8f8; }
+    .highlight .c { color: #408080; font-style: italic } /* Comment */
+    .highlight .err { border: 1px solid #FF0000 } /* Error */
+    .highlight .k { color: #008000; font-weight: bold } /* Keyword */
+    .highlight .o { color: #666666 } /* Operator */
+    .highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+    .highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+    .highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
+    .highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+    .highlight .gd { color: #A00000 } /* Generic.Deleted */
+    .highlight .ge { font-style: italic } /* Generic.Emph */
+    .highlight .gr { color: #FF0000 } /* Generic.Error */
+    .highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+    .highlight .gi { color: #00A000 } /* Generic.Inserted */
+    .highlight .go { color: #808080 } /* Generic.Output */
+    .highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+    .highlight .gs { font-weight: bold } /* Generic.Strong */
+    .highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+    .highlight .gt { color: #0040D0 } /* Generic.Traceback */
+    .highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+    .highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+    .highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+    .highlight .kp { color: #008000 } /* Keyword.Pseudo */
+    .highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+    .highlight .kt { color: #B00040 } /* Keyword.Type */
+    .highlight .m { color: #666666 } /* Literal.Number */
+    .highlight .s { color: #BA2121 } /* Literal.String */
+    .highlight .na { color: #7D9029 } /* Name.Attribute */
+    .highlight .nb { color: #008000 } /* Name.Builtin */
+    .highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+    .highlight .no { color: #880000 } /* Name.Constant */
+    .highlight .nd { color: #AA22FF } /* Name.Decorator */
+    .highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+    .highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+    .highlight .nf { color: #0000FF } /* Name.Function */
+    .highlight .nl { color: #A0A000 } /* Name.Label */
+    .highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+    .highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+    .highlight .nv { color: #19177C } /* Name.Variable */
+    .highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+    .highlight .w { color: #bbbbbb } /* Text.Whitespace */
+    .highlight .mf { color: #666666 } /* Literal.Number.Float */
+    .highlight .mh { color: #666666 } /* Literal.Number.Hex */
+    .highlight .mi { color: #666666 } /* Literal.Number.Integer */
+    .highlight .mo { color: #666666 } /* Literal.Number.Oct */
+    .highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+    .highlight .sc { color: #BA2121 } /* Literal.String.Char */
+    .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+    .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+    .highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+    .highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+    .highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+    .highlight .sx { color: #008000 } /* Literal.String.Other */
+    .highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+    .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+    .highlight .ss { color: #19177C } /* Literal.String.Symbol */
+    .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+    .highlight .vc { color: #19177C } /* Name.Variable.Class */
+    .highlight .vg { color: #19177C } /* Name.Variable.Global */
+    .highlight .vi { color: #19177C } /* Name.Variable.Instance */
+    .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
+    </style>
+</head>
+
+<body>
+    <div id="site-header">
+        <h1><a href="/">Heyzap Mobile SDK</a></h1>
+    </div>
+
+    <div id="wrap">
+      <div id="project">
+        <h2 id="heyzap-unity3d-sdk">Heyzap Unity3D SDK</h2>
+
+<p>The Heyzap SDK allows players to check-in to your game, driving viral
+growth and promoting your game on our social graph.
+For typical applications, the Heyzap SDK will only take a few minutes to 
+integrate.</p>
+
+<p>Find out more about the Heyzap Mobile SDKs <a href="http://www.heyzap.com/mobile/sdk">here</a>.</p>
+
+<h2 id="requirements">Requirements</h2>
+
+<ul>
+  <li>The Heyzap Unity3D SDK supports Android 1.5+ when building for Android.</li>
+  <li>The Heyzap Unity3D SDK supports iOS 3.0+ when building for iOS.</li>
+  <li>The Heyzap Unity3D SDK requires internet access to pull information about your game.</li>
+</ul>
+
+<h2 id="sdk-contents">SDK Contents</h2>
+
+<p>The Unity3D SDK can be found in the Heyzap SDK zip file under the <code>unity-sdk</code> 
+directory. The <code>unity-sdk</code> directory contains:</p>
+
+<ul>
+  <li><strong><code>heyzap.unitypackage</code></strong>: Code for the Heyzap SDK for both Android and iOS builds</li>
+  <li><strong><code>ios-only</code></strong>: Additional files required when building for iOS in Xcode.</li>
+</ul>
+
+<h2 id="step-1-install--load-the-heyzap-sdk-in-unity3d">Step 1: Install &amp; Load the Heyzap SDK in Unity3D</h2>
+
+<ul>
+  <li>
+    <p>Open the Heyzap SDK unitypackage into your project by double-clicking
+the <code>heyzap.unitypackage</code> from the Heyzap SDK zip.</p>
+
+    <p><img src="images/unitypackage.png" alt="unitypackage" /></p>
+
+    <p>Import the package into your project by clicking &lsquo;import&rsquo; in the bottom
+right of the &lsquo;Importing package&rsquo; window.</p>
+
+    <p><img src="images/import-unitypackage.png" alt="Import unitypackage" /></p>
+  </li>
+  <li>
+    <p>Add the following line near the top of your game&rsquo;s initialization code:</p>
+
+    <pre><code>HeyzapLib.load("YOUR_APP_ID");
+</code></pre>
+
+    <p><strong>Note</strong>: Replace YOUR_APP_ID with the app ID for the game in the
+Apple App Store if the game is going to be released for iOS. If the
+game is not going to be released on iOS you can omit this parameter
+completely.
+<a href="#step-4-additional-iphone-specific-configuration">See below</a> for more 
+information on deploying to iOS.</p>
+  </li>
+  <li>
+    <p>You are now ready to add checkin buttons to your game!</p>
+  </li>
+</ul>
+
+<h2 id="step-2-prompt-user-to-check-in-after-levels-high-scores-etc">Step 2: Prompt User To Check-in After Levels, High Scores etc.</h2>
+
+<p>You can additionally allow users to check-in with their score or level
+achievements. This normally goes at the end of a level and is a cool way to
+let them tell their scores/levels to their friends.</p>
+
+<ul>
+  <li>
+    <p>To prompt users to check in after a level, you call the following function:</p>
+
+    <pre><code>HeyzapLib.checkin("I just completed level 10!");
+</code></pre>
+  </li>
+</ul>
+
+<h2 id="step-3-show-a-checkin-button-on-your-games-menu-screen">Step 3: Show a Checkin Button on Your Game&rsquo;s Menu Screen</h2>
+
+<p>To get the most checkins, and therefore drive increased growth, it is
+recommended you provide a &lsquo;check-in&rsquo; button on your main screen or menu 
+screen.</p>
+
+<ul>
+  <li>
+    <p>To bring up the check-in screen in your game, add a button somewhere 
+in your game, and add the following code to the click action:</p>
+
+    <pre><code>HeyzapLib.checkin();
+</code></pre>
+  </li>
+</ul>
+
+<p>You can find the source images for the checkin button in the sdk zip file.</p>
+
+<h2 id="step-4-additional-iphone-specific-configuration">Step 4: Additional iPhone Specific Configuration</h2>
+
+<p>To use the Heyzap Unity3D SDK with iOS devices you must follow the
+following additional steps.</p>
+
+<ul>
+  <li>
+    <p>Ensure your app has an App Store Id. This is a large number assigned to your
+app in iTunes Connect by Apple. You can get an app store id by completing all
+the steps necessary to submit an app short of uploading a binary.</p>
+  </li>
+  <li>
+    <p>When calling HeyzapLib.load() please pass in the App ID as follows,</p>
+
+    <pre><code>HeyzapLib.load("YOUR_APP_ID");
+</code></pre>
+  </li>
+  <li>
+    <p>In Unity3D, open the <em>Build Settings</em> dialog, then click on 
+<em>Player Settings&hellip;</em></p>
+
+    <p><img src="images/unity-build-settings.png" alt="Build Settings" />
+<img src="images/unity-player-settings.png" alt="Player Settings" /></p>
+  </li>
+  <li>
+    <p>Hit <em>Build</em> or <em>Build And Run</em> to generate the Xcode project for your game</p>
+  </li>
+  <li>
+    <p>In Xcode, drag all the files from the <code>unity-sdk/ios-only</code> folder in
+the Heyzap SDK zip into the Xcode project navigator.</p>
+
+    <p><img src="images/unity-drag.png" alt="Drag IOS Files" /></p>
+  </li>
+  <li>
+    <p>In Xcode, select your project and open the <em>Build Phases</em> tab. Now expand
+the <em>Link Binary With Libraries</em> section and click the + button:</p>
+
+    <p><img src="images/unity-add-library.png" alt="Add a Library" /></p>
+  </li>
+  <li>
+    <p>Select the <em>CoreGraphics.framework</em> file and click <em>Add</em>:</p>
+
+    <p><img src="images/unity-add-core-graphics.png" alt="Add CoreGraphics" /></p>
+  </li>
+  <li>
+    <p>You can now build the Xcode project and test on your device as usual</p>
+  </li>
+</ul>
+
+<p><strong>Note</strong>: Make sure to specify <em>Append</em> when building and saving the generated
+XCode project. This will save you having to repeat the above steps.</p>
+
+<h2 id="step-5-sdk-icon-overlay">Step 5: SDK Icon Overlay</h2>
+<p>To highlight to players that your game has integrated with Heyzap, we recommend
+overlaying the Heyzap icon onto your game icon. This will increase the
+installs of your game, highlighting to potential players that they can check into
+Heyzap from within your game. </p>
+
+<p>In order to generate the icons, claim your game through
+the <a href="http://www.heyzap.com/mobile_developers/dashboard">Heyzap developer dashboard</a>. Once you have claimed
+your game, view that games details and then click &ldquo;SDK Icon Overlays&rdquo;. From here you can
+download the icons.</p>
+
+<h2 id="step-6-testing--releasing">Step 6: Testing &amp; Releasing</h2>
+<p>Testing your game with Heyzap before release is essential. This will ensure 
+the game fully leverages the Heyzap features from the instant it is live.</p>
+
+<p>Make sure to test your game with both the Heyzap application installed, and
+with Heyzap uninstalled, since the check-in process will be slightly different
+for each of those states.</p>
+
+<p>Please also send a copy of your game after integrating with the Heyzap SDK to
+<a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#105;&#110;&#116;&#101;&#103;&#114;&#097;&#116;&#105;&#111;&#110;&#064;&#104;&#101;&#121;&#122;&#097;&#112;&#046;&#099;&#111;&#109;">&#105;&#110;&#116;&#101;&#103;&#114;&#097;&#116;&#105;&#111;&#110;&#064;&#104;&#101;&#121;&#122;&#097;&#112;&#046;&#099;&#111;&#109;</a> so we can help with the testing process and so we can 
+better promote your game.</p>
+
+<p>For iOS please send a test build of the app to <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#105;&#110;&#116;&#101;&#103;&#114;&#097;&#116;&#105;&#111;&#110;&#064;&#104;&#101;&#121;&#122;&#097;&#112;&#046;&#099;&#111;&#109;">&#105;&#110;&#116;&#101;&#103;&#114;&#097;&#116;&#105;&#111;&#110;&#064;&#104;&#101;&#121;&#122;&#097;&#112;&#046;&#099;&#111;&#109;</a>. The
+UDID to build for is <em>d504e5f2cc0d481c01d88ad6d71fc2870d1fa508</em>. You can use
+<a href="http://www.testflightapp.com">http://www.testflightapp.com</a> to help, or simply build directly.</p>
+
+<h2 id="advanced-sdk-usage">Advanced SDK Usage</h2>
+
+<h3 id="hide-the-checkin-prompt-overlay">Hide the Checkin Prompt Overlay</h3>
+
+<p>If you would prefer not to show the checkin prompt on Android when loading
+the Heyzap sdk, you can pass an optional first parameter to <code>load</code>:</p>
+
+<pre><code>    HeyzapLib.load(false);
+</code></pre>
+
+<p>If you are deploying to iOS you can make the following call instead:</p>
+
+<pre><code> HeyzapLib.load(false,"YOUR_APP_ID");
+</code></pre>
+
+<p>This is not recommended as it will reduce the number of checkins your game will
+receive, limiting promotional and viral potential.</p>
+
+<h3 id="choosing-which-url-scheme-is-used-by-heyzap">Choosing Which URL Scheme is Used By Heyzap</h3>
+
+<p>If your game defines multiple URL schemes and you wish to choose a specific 
+one to use when Heyzap switches back to your game, you can set this 
+when calling load:</p>
+
+<pre><code>    HeyzapLib.load("YOUR_APP_ID", "coolapp://");
+</code></pre>
+
+<h2 id="app-store-ids--url-schemes">App Store IDs &amp; URL Schemes</h2>
+
+<h3 id="obtaining-an-app-store-id">Obtaining an App Store ID</h3>
+
+<p>The App Store ID is a large number assigned to your app in iTunes Connect by
+Apple. You can get an App Store ID by completing all the steps necessary to 
+submit an app short of uploading your application.</p>
+
+<h3 id="setting-up-a-url-scheme">Setting Up A URL Scheme</h3>
+
+<p>The Heyzap SDK requires your game to configure a URL scheme so that we can
+relaunch your app after players check in. You can specify any URL scheme you
+want in your app.</p>
+
+<ul>
+  <li>
+    <p>To add a URL scheme in Xcode, go to the Info section of your build target
+settings and click <em>Add</em> in the bottom right of the screen. From there you
+will be presented with a menu, from which you select <em>Add URL type</em>.</p>
+
+    <p><img src="images/url-scheme-settings.png" alt="URL Scheme Settings" /></p>
+  </li>
+  <li>
+    <p>From there, you should specify the Identifier as <code>yourappname</code> and the URL
+scheme as <code>yourappname</code>. Make sure your chosen URL scheme contains no 
+spaces or special characters.</p>
+
+    <p><img src="images/url-scheme.png" alt="URL Scheme" /></p>
+  </li>
+</ul>
+
+<h2 id="additional-questions">Additional Questions?</h2>
+
+<p>If you have any additional questions about integrating with our SDK, please
+email <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#105;&#110;&#116;&#101;&#103;&#114;&#097;&#116;&#105;&#111;&#110;&#064;&#104;&#101;&#121;&#122;&#097;&#112;&#046;&#099;&#111;&#109;">&#105;&#110;&#116;&#101;&#103;&#114;&#097;&#116;&#105;&#111;&#110;&#064;&#104;&#101;&#121;&#122;&#097;&#112;&#046;&#099;&#111;&#109;</a> and we&rsquo;ll walk you through the process.</p>
+
+
+      </div>
+    </div>
+</body>
+</html>

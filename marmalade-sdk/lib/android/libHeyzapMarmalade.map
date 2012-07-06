@@ -1,0 +1,402 @@
+Archive member included because of file (symbol)
+
+/Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(edk_helpers.o)
+                              release/HeyzapMarmalade_platform.os (s3eEdkThreadRunOnOS)
+
+Discarded input sections
+
+ _ZN7_JNIEnv14CallVoidMethodEP8_jobjectP10_jmethodIDz
+                0x00000000        0x0 release/HeyzapMarmalade_platform.os
+ _ZN7_JNIEnv9NewObjectEP7_jclassP10_jmethodIDz
+                0x00000000        0x0 release/HeyzapMarmalade_platform.os
+ .note.GNU-stack
+                0x00000000        0x0 release/HeyzapMarmalade_platform.os
+ .note.GNU-stack
+                0x00000000        0x0 release/HeyzapMarmalade.os
+ .note.GNU-stack
+                0x00000000        0x0 release/HeyzapMarmalade_register.os
+ .note.GNU-stack
+                0x00000000        0x0 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(edk_helpers.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD release/HeyzapMarmalade_platform.os
+LOAD release/HeyzapMarmalade.os
+LOAD release/HeyzapMarmalade_register.os
+LOAD /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a
+LOAD /Developer/Marmalade/5.2/s3e/edk/lib/android/libplaceholderplaceholderplaceholderplaceholderplaceholder.so
+LOAD /usr/local/Cellar/android-ndk/r6/platforms/android-9/arch-arm/usr/lib/libc.so
+LOAD /usr/local/Cellar/android-ndk/r6/platforms/android-9/arch-arm/usr/lib/libm.so
+LOAD /usr/local/Cellar/android-ndk/r6/platforms/android-9/arch-arm/usr/lib/liblog.so
+LOAD /usr/local/Cellar/android-ndk/r6/sources/cxx-stl/gnu-libstdc++/libs/armeabi/libstdc++.a
+LOAD /usr/local/Cellar/android-ndk/r6/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.4.3/libgcc.a
+                0x000000d4                . = (0x0 + SIZEOF_HEADERS)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash           0x000000d4       0xa4
+ *(.hash)
+ .hash          0x000000d4       0xa4 release/HeyzapMarmalade_platform.os
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym         0x00000178      0x160
+ *(.dynsym)
+ .dynsym        0x00000178      0x160 release/HeyzapMarmalade_platform.os
+
+.dynstr         0x000002d8      0x16d
+ *(.dynstr)
+ .dynstr        0x000002d8      0x16d release/HeyzapMarmalade_platform.os
+
+.gnu.version    0x00000446        0x0 load address 0x00000445
+ *(.gnu.version)
+ .gnu.version   0x00000000        0x0 release/HeyzapMarmalade_platform.os
+
+.gnu.version_d  0x00000448        0x0 load address 0x00000445
+ *(.gnu.version_d)
+ .gnu.version_d
+                0x00000000        0x0 release/HeyzapMarmalade_platform.os
+
+.gnu.version_r  0x00000448        0x0 load address 0x00000445
+ *(.gnu.version_r)
+ .gnu.version_r
+                0x00000000        0x0 release/HeyzapMarmalade_platform.os
+
+.rel.dyn        0x00000448       0x28
+ *(.rel.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rel.data.rel.ro* .rel.gnu.linkonce.d.rel.ro.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rel.dtors)
+ *(.rel.got)
+ .rel.got       0x00000448       0x28 release/HeyzapMarmalade_platform.os
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+
+.rela.dyn
+ *(.rela.init)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rela.fini)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rela.ctors)
+ *(.rela.dtors)
+ *(.rela.got)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+
+.rel.plt        0x00000470       0x38
+ *(.rel.plt)
+ .rel.plt       0x00000470       0x38 release/HeyzapMarmalade_platform.os
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt            0x000004a8       0x68
+ *(.plt)
+ .plt           0x000004a8       0x68 release/HeyzapMarmalade_platform.os
+
+.text           0x00000510      0x7dc
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x00000510      0x42c release/HeyzapMarmalade_platform.os
+                0x00000720                _Z22checkinHeyzap_platformv
+                0x00000514                _Z28HeyzapMarmaladeInit_platformv
+                0x000007f4                _Z19loadHeyzap_platformPKcS0_b
+                0x00000510                _Z33HeyzapMarmaladeTerminate_platformv
+                0x00000778                _Z33checkinHeyzapWithMessage_platformPKc
+ .text._ZN7_JNIEnv14CallVoidMethodEP8_jobjectP10_jmethodIDz
+                0x0000093c       0x38 release/HeyzapMarmalade_platform.os
+                0x0000093c                _ZN7_JNIEnv14CallVoidMethodEP8_jobjectP10_jmethodIDz
+ .text._ZN7_JNIEnv9NewObjectEP7_jclassP10_jmethodIDz
+                0x00000974       0x38 release/HeyzapMarmalade_platform.os
+                0x00000974                _ZN7_JNIEnv9NewObjectEP7_jclassP10_jmethodIDz
+ .text          0x000009ac       0x50 release/HeyzapMarmalade.os
+                0x000009dc                _Z24HeyzapMarmaladeTerminatev
+                0x000009bc                checkinHeyzap
+                0x000009cc                loadHeyzap
+                0x000009ac                checkinHeyzapWithMessage
+                0x000009ec                _Z19HeyzapMarmaladeInitv
+ .text          0x000009fc      0x260 release/HeyzapMarmalade_register.os
+                0x000009fc                _Z26HeyzapMarmaladeRegisterExtv
+                0x00000b34                HeyzapMarmaladeUnRegister
+                0x00000b68                HeyzapMarmaladeRegister
+                0x00000ba0                RegisterExt
+ .text          0x00000c5c        0x0 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(edk_helpers.o)
+ .text.s3eEdkThreadRunOnOSAsync
+                0x00000c5c       0x30 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(edk_helpers.o)
+                0x00000c5c                s3eEdkThreadRunOnOSAsync
+ .text.s3eEdkThreadRunOnOS
+                0x00000c8c       0x30 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(edk_helpers.o)
+                0x00000c8c                s3eEdkThreadRunOnOS
+ .text.s3eEdkErrorSetString
+                0x00000cbc       0x30 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(edk_helpers.o)
+                0x00000cbc                s3eEdkErrorSetString
+ *(.gnu.warning)
+ *(.glue_7t)
+ .glue_7t       0x00000000        0x0 linker stubs
+ *(.glue_7)
+ .glue_7        0x00000000        0x0 linker stubs
+ *(.vfp11_veneer)
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+ *(.v4_bx)
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.fini
+ *(.fini)
+                0x00000cec                PROVIDE (__etext, .)
+                0x00000cec                PROVIDE (_etext, .)
+                0x00000cec                PROVIDE (etext, .)
+
+.rodata         0x00000cec       0xb8
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.str1.4
+                0x00000cec       0xa6 release/HeyzapMarmalade_platform.os
+                                 0xa8 (size before relaxing)
+ *fill*         0x00000d92        0x2 00
+ .rodata.str1.4
+                0x00000d94       0x10 release/HeyzapMarmalade_register.os
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab      0x00000da4       0x24
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+ .ARM.extab.text.s3eEdkThreadRunOnOSAsync
+                0x00000da4        0xc /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(edk_helpers.o)
+ .ARM.extab.text.s3eEdkThreadRunOnOS
+                0x00000db0        0xc /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(edk_helpers.o)
+ .ARM.extab.text.s3eEdkErrorSetString
+                0x00000dbc        0xc /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(edk_helpers.o)
+                0x00000dc8                __exidx_start = .
+
+.ARM.exidx      0x00000dc8       0x18
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+ .ARM.exidx.text.s3eEdkThreadRunOnOSAsync
+                0x00000dc8        0x8 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(edk_helpers.o)
+ .ARM.exidx.text.s3eEdkThreadRunOnOS
+                0x00000dd0        0x8 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(edk_helpers.o)
+ .ARM.exidx.text.s3eEdkErrorSetString
+                0x00000dd8        0x8 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(edk_helpers.o)
+                0x00000de0                __exidx_end = .
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+                0x00000de0                . = (ALIGN (0x1000) - ((0x1000 - .) & 0xfff))
+                0x00001de0                . = (0x1000 DATA_SEGMENT_ALIGN 0x1000)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.preinit_array
+ *(.preinit_array)
+
+.init_array
+ *(SORT(.init_array.*))
+ *(.init_array)
+
+.fini_array
+ *(.fini_array)
+ *(SORT(.fini_array.*))
+
+.ctors
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+
+.jcr
+ *(.jcr)
+
+.data.rel.ro
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ *(.data.rel.ro* .gnu.linkonce.d.rel.ro.*)
+
+.dynamic        0x00001de0       0xb8
+ *(.dynamic)
+ .dynamic       0x00001de0       0xb8 release/HeyzapMarmalade_platform.os
+                0x00001de0                _DYNAMIC
+                0x00001e98                . = (. DATA_SEGMENT_RELRO_END 0x0)
+
+.got            0x00001e98       0x3c
+ *(.got.plt)
+ .got.plt       0x00001e98       0x28 release/HeyzapMarmalade_platform.os
+                0x00001e98                _GLOBAL_OFFSET_TABLE_
+ *(.got)
+ .got           0x00001ec0       0x14 release/HeyzapMarmalade_platform.os
+
+.data           0x00001ed4        0x0
+                0x00001ed4                __data_start = .
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x00001ed4        0x0 release/HeyzapMarmalade_platform.os
+ .data          0x00001ed4        0x0 release/HeyzapMarmalade.os
+ .data          0x00001ed4        0x0 release/HeyzapMarmalade_register.os
+ .data          0x00001ed4        0x0 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(edk_helpers.o)
+
+.data1
+ *(.data1)
+                0x00001ed4                _edata = .
+                0x00001ed4                PROVIDE (edata, .)
+                0x00001ed4                __bss_start = .
+                0x00001ed4                __bss_start__ = .
+
+.bss            0x00001ed4       0x10
+ *(.dynbss)
+ .dynbss        0x00000000        0x0 release/HeyzapMarmalade_platform.os
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x00001ed4       0x10 release/HeyzapMarmalade_platform.os
+ .bss           0x00001ee4        0x0 release/HeyzapMarmalade.os
+ .bss           0x00001ee4        0x0 release/HeyzapMarmalade_register.os
+ .bss           0x00001ee4        0x0 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(edk_helpers.o)
+ *(COMMON)
+                0x00001ee4                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0x00001ee4                _bss_end__ = .
+                0x00001ee4                __bss_end__ = .
+                0x00001ee4                . = ALIGN (0x4)
+                0x00001ee4                . = ALIGN (0x4)
+                0x00001ee4                __end__ = .
+                0x00001ee4                _end = .
+                0x00001ee4                PROVIDE (end, .)
+                0x00001ee4                . = DATA_SEGMENT_END (.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x61
+ *(.comment)
+ .comment       0x00000000       0x12 release/HeyzapMarmalade_platform.os
+ .comment       0x00000012       0x12 release/HeyzapMarmalade.os
+ .comment       0x00000024       0x12 release/HeyzapMarmalade_register.os
+ .comment       0x00000036       0x2b /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(edk_helpers.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info .gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+OUTPUT(/Users/james/src/heyzap/mobile-sdk/marmalade-sdk/lib/android/libHeyzapMarmalade.so elf32-littlearm)
+
+.ARM.attributes
+                0x00000000       0x2a
+ .ARM.attributes
+                0x00000000       0x28 release/HeyzapMarmalade_platform.os
+ .ARM.attributes
+                0x00000028       0x28 release/HeyzapMarmalade.os
+ .ARM.attributes
+                0x00000050       0x28 release/HeyzapMarmalade_register.os
+ .ARM.attributes
+                0x00000078       0x2c /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(edk_helpers.o)

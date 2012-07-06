@@ -1,0 +1,643 @@
+Archive member included because of file (symbol)
+
+/Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+                              debug/HeyzapMarmalade_platform.os (IwDebugTraceSetTraceChannel)
+/Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(edk_helpers.o)
+                              debug/HeyzapMarmalade_platform.os (s3eEdkThreadRunOnOS)
+
+Discarded input sections
+
+ _ZN7_JNIEnv9FindClassEPKc
+                0x00000000        0x0 debug/HeyzapMarmalade_platform.os
+ _ZN7_JNIEnv17ExceptionOccurredEv
+                0x00000000        0x0 debug/HeyzapMarmalade_platform.os
+ _ZN7_JNIEnv17ExceptionDescribeEv
+                0x00000000        0x0 debug/HeyzapMarmalade_platform.os
+ _ZN7_JNIEnv14ExceptionClearEv
+                0x00000000        0x0 debug/HeyzapMarmalade_platform.os
+ _ZN7_JNIEnv12NewGlobalRefEP8_jobject
+                0x00000000        0x0 debug/HeyzapMarmalade_platform.os
+ _ZN7_JNIEnv14DeleteLocalRefEP8_jobject
+                0x00000000        0x0 debug/HeyzapMarmalade_platform.os
+ _ZN7_JNIEnv9NewObjectEP7_jclassP10_jmethodIDz
+                0x00000000        0x0 debug/HeyzapMarmalade_platform.os
+ _ZN7_JNIEnv11GetMethodIDEP7_jclassPKcS3_
+                0x00000000        0x0 debug/HeyzapMarmalade_platform.os
+ _ZN7_JNIEnv14CallVoidMethodEP8_jobjectP10_jmethodIDz
+                0x00000000        0x0 debug/HeyzapMarmalade_platform.os
+ _ZN7_JNIEnv12NewStringUTFEPKc
+                0x00000000        0x0 debug/HeyzapMarmalade_platform.os
+ _ZN7_JavaVM6GetEnvEPPvi
+                0x00000000        0x0 debug/HeyzapMarmalade_platform.os
+ .note.GNU-stack
+                0x00000000        0x0 debug/HeyzapMarmalade_platform.os
+ .note.GNU-stack
+                0x00000000        0x0 debug/HeyzapMarmalade.os
+ .note.GNU-stack
+                0x00000000        0x0 debug/HeyzapMarmalade_register.os
+ .note.GNU-stack
+                0x00000000        0x0 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .note.GNU-stack
+                0x00000000        0x0 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(edk_helpers.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD debug/HeyzapMarmalade_platform.os
+LOAD debug/HeyzapMarmalade.os
+LOAD debug/HeyzapMarmalade_register.os
+LOAD /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a
+LOAD /Developer/Marmalade/5.2/s3e/edk/lib/android/libplaceholderplaceholderplaceholderplaceholderplaceholder.so
+LOAD /usr/local/Cellar/android-ndk/r6/platforms/android-9/arch-arm/usr/lib/libc.so
+LOAD /usr/local/Cellar/android-ndk/r6/platforms/android-9/arch-arm/usr/lib/libm.so
+LOAD /usr/local/Cellar/android-ndk/r6/platforms/android-9/arch-arm/usr/lib/liblog.so
+LOAD /usr/local/Cellar/android-ndk/r6/sources/cxx-stl/gnu-libstdc++/libs/armeabi/libstdc++.a
+LOAD /usr/local/Cellar/android-ndk/r6/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.4.3/libgcc.a
+                0x000000d4                . = (0x0 + SIZEOF_HEADERS)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash           0x000000d4      0x140
+ *(.hash)
+ .hash          0x000000d4      0x140 debug/HeyzapMarmalade_platform.os
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym         0x00000214      0x290
+ *(.dynsym)
+ .dynsym        0x00000214      0x290 debug/HeyzapMarmalade_platform.os
+
+.dynstr         0x000004a4      0x256
+ *(.dynstr)
+ .dynstr        0x000004a4      0x256 debug/HeyzapMarmalade_platform.os
+
+.gnu.version    0x000006fa        0x0
+ *(.gnu.version)
+ .gnu.version   0x00000000        0x0 debug/HeyzapMarmalade_platform.os
+
+.gnu.version_d  0x000006fc        0x0 load address 0x000006fa
+ *(.gnu.version_d)
+ .gnu.version_d
+                0x00000000        0x0 debug/HeyzapMarmalade_platform.os
+
+.gnu.version_r  0x000006fc        0x0 load address 0x000006fa
+ *(.gnu.version_r)
+ .gnu.version_r
+                0x00000000        0x0 debug/HeyzapMarmalade_platform.os
+
+.rel.dyn        0x000006fc      0x158
+ *(.rel.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ .rel.text.IwAssertRegisterTextCallback
+                0x000006fc        0x8 debug/HeyzapMarmalade_platform.os
+ .rel.text.IwAssertRegisterCallback
+                0x00000704        0x8 debug/HeyzapMarmalade_platform.os
+ .rel.text.IwDebugTraceSetTraceChannel
+                0x0000070c        0x8 debug/HeyzapMarmalade_platform.os
+ .rel.text.IwDebugErrorRegisterCallback
+                0x00000714        0x8 debug/HeyzapMarmalade_platform.os
+ .rel.text.IwDebugAssertSetUID
+                0x0000071c        0x8 debug/HeyzapMarmalade_platform.os
+ .rel.text._GLOBAL__I_g_DebugGlobals
+                0x00000724        0x8 debug/HeyzapMarmalade_platform.os
+ .rel.text.IwDebugClearConfigCache
+                0x0000072c        0x8 debug/HeyzapMarmalade_platform.os
+ .rel.text.IwDebugErrorShow
+                0x00000734       0x10 debug/HeyzapMarmalade_platform.os
+ .rel.text.IwDebugTraceLineVPrintf
+                0x00000744       0x20 debug/HeyzapMarmalade_platform.os
+ .rel.text.IwDebugTraceIsChannelOn
+                0x00000764       0x18 debug/HeyzapMarmalade_platform.os
+ .rel.text.IwDebugAssertIsChannelOn
+                0x0000077c       0x10 debug/HeyzapMarmalade_platform.os
+ .rel.text.IwDebugAssertSetMessage
+                0x0000078c       0x20 debug/HeyzapMarmalade_platform.os
+ .rel.text.IwDebugAssertSetSolution
+                0x000007ac       0x18 debug/HeyzapMarmalade_platform.os
+ .rel.text.IwDebugAssertShow
+                0x000007c4       0x48 debug/HeyzapMarmalade_platform.os
+ .rel.text.IwDebugTraceChannelSwitch
+                0x0000080c       0x18 debug/HeyzapMarmalade_platform.os
+ *(.rel.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rel.data.rel.ro* .rel.gnu.linkonce.d.rel.ro.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rel.dtors)
+ *(.rel.got)
+ .rel.got       0x00000824       0x28 debug/HeyzapMarmalade_platform.os
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ .rel.init_array
+                0x0000084c        0x8 debug/HeyzapMarmalade_platform.os
+
+.rela.dyn
+ *(.rela.init)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rela.fini)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rela.ctors)
+ *(.rela.dtors)
+ *(.rela.got)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+
+.rel.plt        0x00000854       0xc8
+ *(.rel.plt)
+ .rel.plt       0x00000854       0xc8 debug/HeyzapMarmalade_platform.os
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt            0x0000091c      0x140
+ *(.plt)
+ .plt           0x0000091c      0x140 debug/HeyzapMarmalade_platform.os
+
+.text           0x00000a5c     0x1d70
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x00000a5c      0x56c debug/HeyzapMarmalade_platform.os
+                0x00000f0c                _Z22checkinHeyzap_platformv
+                0x00000b5c                _Z28HeyzapMarmaladeInit_platformv
+                0x00000e70                _Z19loadHeyzap_platformPKcS0_b
+                0x00000e6c                _Z33HeyzapMarmaladeTerminate_platformv
+                0x00000f5c                _Z33checkinHeyzapWithMessage_platformPKc
+ .text._ZN7_JNIEnv9FindClassEPKc
+                0x00000fc8       0x40 debug/HeyzapMarmalade_platform.os
+                0x00000fc8                _ZN7_JNIEnv9FindClassEPKc
+ .text._ZN7_JNIEnv17ExceptionOccurredEv
+                0x00001008       0x38 debug/HeyzapMarmalade_platform.os
+                0x00001008                _ZN7_JNIEnv17ExceptionOccurredEv
+ .text._ZN7_JNIEnv17ExceptionDescribeEv
+                0x00001040       0x30 debug/HeyzapMarmalade_platform.os
+                0x00001040                _ZN7_JNIEnv17ExceptionDescribeEv
+ .text._ZN7_JNIEnv14ExceptionClearEv
+                0x00001070       0x30 debug/HeyzapMarmalade_platform.os
+                0x00001070                _ZN7_JNIEnv14ExceptionClearEv
+ .text._ZN7_JNIEnv12NewGlobalRefEP8_jobject
+                0x000010a0       0x40 debug/HeyzapMarmalade_platform.os
+                0x000010a0                _ZN7_JNIEnv12NewGlobalRefEP8_jobject
+ .text._ZN7_JNIEnv14DeleteLocalRefEP8_jobject
+                0x000010e0       0x38 debug/HeyzapMarmalade_platform.os
+                0x000010e0                _ZN7_JNIEnv14DeleteLocalRefEP8_jobject
+ .text._ZN7_JNIEnv9NewObjectEP7_jclassP10_jmethodIDz
+                0x00001118       0x60 debug/HeyzapMarmalade_platform.os
+                0x00001118                _ZN7_JNIEnv9NewObjectEP7_jclassP10_jmethodIDz
+ .text._ZN7_JNIEnv11GetMethodIDEP7_jclassPKcS3_
+                0x00001178       0x50 debug/HeyzapMarmalade_platform.os
+                0x00001178                _ZN7_JNIEnv11GetMethodIDEP7_jclassPKcS3_
+ .text._ZN7_JNIEnv14CallVoidMethodEP8_jobjectP10_jmethodIDz
+                0x000011c8       0x50 debug/HeyzapMarmalade_platform.os
+                0x000011c8                _ZN7_JNIEnv14CallVoidMethodEP8_jobjectP10_jmethodIDz
+ .text._ZN7_JNIEnv12NewStringUTFEPKc
+                0x00001218       0x40 debug/HeyzapMarmalade_platform.os
+                0x00001218                _ZN7_JNIEnv12NewStringUTFEPKc
+ .text._ZN7_JavaVM6GetEnvEPPvi
+                0x00001258       0x48 debug/HeyzapMarmalade_platform.os
+                0x00001258                _ZN7_JavaVM6GetEnvEPPvi
+ .text          0x000012a0       0x90 debug/HeyzapMarmalade.os
+                0x000012b8                _Z24HeyzapMarmaladeTerminatev
+                0x00001300                checkinHeyzap
+                0x000012c8                loadHeyzap
+                0x00001310                checkinHeyzapWithMessage
+                0x000012a0                _Z19HeyzapMarmaladeInitv
+ .text          0x00001330      0x384 debug/HeyzapMarmalade_register.os
+                0x000015a8                _Z26HeyzapMarmaladeRegisterExtv
+                0x00001560                HeyzapMarmaladeUnRegister
+                0x0000150c                HeyzapMarmaladeRegister
+                0x000016a4                RegisterExt
+ .text          0x000016b4        0x0 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .text.IwAssertRegisterTextCallback
+                0x000016b4       0x18 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+                0x000016b4                IwAssertRegisterTextCallback
+ .text.IwAssertRegisterCallback
+                0x000016cc       0x18 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+                0x000016cc                IwAssertRegisterCallback
+ .text.IwDebugTraceSetTraceChannel
+                0x000016e4       0x18 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+                0x000016e4                IwDebugTraceSetTraceChannel
+ .text.IwDebugErrorRegisterCallback
+                0x000016fc       0x18 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+                0x000016fc                IwDebugErrorRegisterCallback
+ .text.IwDebugAssertSetUID
+                0x00001714       0x10 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+                0x00001714                IwDebugAssertSetUID
+ .text._GLOBAL__I_g_DebugGlobals
+                0x00001724       0x8c /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .text.IwDebugClearConfigCache
+                0x000017b0       0x80 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+                0x000017b0                IwDebugClearConfigCache
+ .text.IwDebugErrorShow
+                0x00001830       0xdc /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+                0x00001830                IwDebugErrorShow
+ .text.IwDebugTraceLineVPrintf
+                0x0000190c       0xe8 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+                0x0000190c                IwDebugTraceLineVPrintf
+ .text.IwDebugTraceLinePrintf
+                0x000019f4       0x30 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+                0x000019f4                IwDebugTraceLinePrintf
+ .text.IwDebugTraceIsChannelOn
+                0x00001a24      0x278 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+                0x00001a24                IwDebugTraceIsChannelOn
+ .text.IwDebugAssertIsChannelOn
+                0x00001c9c      0x1d0 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+                0x00001c9c                IwDebugAssertIsChannelOn
+ .text.IwDebugTraceDisable
+                0x00001e6c       0x1c /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+                0x00001e6c                IwDebugTraceDisable
+ .text.IwDebugAssertSetMessage
+                0x00001e88       0xe4 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+                0x00001e88                IwDebugAssertSetMessage
+ .text.IwDebugAssertSetSolution
+                0x00001f6c       0x90 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+                0x00001f6c                IwDebugAssertSetSolution
+ .text.IwDebugAssertShow
+                0x00001ffc      0x2e8 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+                0x00001ffc                IwDebugAssertShow
+ .text.IwDebugTraceChannelSwitch
+                0x000022e4      0x458 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+                0x000022e4                IwDebugTraceChannelSwitch
+ .text          0x0000273c        0x0 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(edk_helpers.o)
+ .text.s3eEdkThreadRunOnOSAsync
+                0x0000273c       0x30 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(edk_helpers.o)
+                0x0000273c                s3eEdkThreadRunOnOSAsync
+ .text.s3eEdkThreadRunOnOS
+                0x0000276c       0x30 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(edk_helpers.o)
+                0x0000276c                s3eEdkThreadRunOnOS
+ .text.s3eEdkErrorSetString
+                0x0000279c       0x30 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(edk_helpers.o)
+                0x0000279c                s3eEdkErrorSetString
+ *(.gnu.warning)
+ *(.glue_7t)
+ .glue_7t       0x00000000        0x0 linker stubs
+ *(.glue_7)
+ .glue_7        0x00000000        0x0 linker stubs
+ *(.vfp11_veneer)
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+ *(.v4_bx)
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.fini
+ *(.fini)
+                0x000027cc                PROVIDE (__etext, .)
+                0x000027cc                PROVIDE (_etext, .)
+                0x000027cc                PROVIDE (etext, .)
+
+.rodata         0x000027cc      0x314
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata        0x000027cc      0x114 debug/HeyzapMarmalade_platform.os
+ .rodata        0x000028e0       0xe4 debug/HeyzapMarmalade_register.os
+ .rodata.str1.4
+                0x000029c4      0x11c /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+                                0x120 (size before relaxing)
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab      0x00002ae0       0x6c
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+ .ARM.extab.text.IwAssertRegisterTextCallback
+                0x00002ae0        0x0 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.extab.text.IwAssertRegisterCallback
+                0x00002ae0        0x0 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.extab.text.IwDebugTraceSetTraceChannel
+                0x00002ae0        0x0 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.extab.text.IwDebugErrorRegisterCallback
+                0x00002ae0        0x0 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.extab.text.IwDebugAssertSetUID
+                0x00002ae0        0x0 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.extab.text._GLOBAL__I_g_DebugGlobals
+                0x00002ae0        0x0 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.extab.text.IwDebugClearConfigCache
+                0x00002ae0        0x0 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.extab.text.IwDebugErrorShow
+                0x00002ae0        0xc /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.extab.text.IwDebugTraceLineVPrintf
+                0x00002aec        0xc /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.extab.text.IwDebugTraceLinePrintf
+                0x00002af8        0xc /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.extab.text.IwDebugTraceIsChannelOn
+                0x00002b04        0x0 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.extab.text.IwDebugAssertIsChannelOn
+                0x00002b04        0x0 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.extab.text.IwDebugTraceDisable
+                0x00002b04        0xc /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.extab.text.IwDebugAssertSetMessage
+                0x00002b10        0xc /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.extab.text.IwDebugAssertSetSolution
+                0x00002b1c        0xc /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.extab.text.IwDebugAssertShow
+                0x00002b28        0x0 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.extab.text.IwDebugTraceChannelSwitch
+                0x00002b28        0x0 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.extab.text.s3eEdkThreadRunOnOSAsync
+                0x00002b28        0xc /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(edk_helpers.o)
+ .ARM.extab.text.s3eEdkThreadRunOnOS
+                0x00002b34        0xc /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(edk_helpers.o)
+ .ARM.extab.text.s3eEdkErrorSetString
+                0x00002b40        0xc /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(edk_helpers.o)
+                0x00002b4c                __exidx_start = .
+
+.ARM.exidx      0x00002b4c       0xa0
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+ .ARM.exidx.text.IwAssertRegisterTextCallback
+                0x00002b4c        0x8 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.exidx.text.IwAssertRegisterCallback
+                0x00002b54        0x8 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.exidx.text.IwDebugTraceSetTraceChannel
+                0x00002b5c        0x8 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.exidx.text.IwDebugErrorRegisterCallback
+                0x00002b64        0x8 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.exidx.text.IwDebugAssertSetUID
+                0x00002b6c        0x8 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.exidx.text._GLOBAL__I_g_DebugGlobals
+                0x00002b74        0x8 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.exidx.text.IwDebugClearConfigCache
+                0x00002b7c        0x8 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.exidx.text.IwDebugErrorShow
+                0x00002b84        0x8 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.exidx.text.IwDebugTraceLineVPrintf
+                0x00002b8c        0x8 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.exidx.text.IwDebugTraceLinePrintf
+                0x00002b94        0x8 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.exidx.text.IwDebugTraceIsChannelOn
+                0x00002b9c        0x8 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.exidx.text.IwDebugAssertIsChannelOn
+                0x00002ba4        0x8 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.exidx.text.IwDebugTraceDisable
+                0x00002bac        0x8 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.exidx.text.IwDebugAssertSetMessage
+                0x00002bb4        0x8 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.exidx.text.IwDebugAssertSetSolution
+                0x00002bbc        0x8 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.exidx.text.IwDebugAssertShow
+                0x00002bc4        0x8 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.exidx.text.IwDebugTraceChannelSwitch
+                0x00002bcc        0x8 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.exidx.text.s3eEdkThreadRunOnOSAsync
+                0x00002bd4        0x8 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(edk_helpers.o)
+ .ARM.exidx.text.s3eEdkThreadRunOnOS
+                0x00002bdc        0x8 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(edk_helpers.o)
+ .ARM.exidx.text.s3eEdkErrorSetString
+                0x00002be4        0x8 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(edk_helpers.o)
+                0x00002bec                __exidx_end = .
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+                0x00002bec                . = (ALIGN (0x1000) - ((0x1000 - .) & 0xfff))
+                0x00003000                . = (0x1000 DATA_SEGMENT_ALIGN 0x1000)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.preinit_array
+ *(.preinit_array)
+
+.init_array     0x00003000        0x4
+ *(SORT(.init_array.*))
+ *(.init_array)
+ .init_array    0x00003000        0x4 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+
+.fini_array
+ *(.fini_array)
+ *(SORT(.fini_array.*))
+
+.ctors
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+
+.jcr
+ *(.jcr)
+
+.data.rel.ro
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ *(.data.rel.ro* .gnu.linkonce.d.rel.ro.*)
+
+.dynamic        0x00003004       0xd0
+ *(.dynamic)
+ .dynamic       0x00003004       0xd0 debug/HeyzapMarmalade_platform.os
+                0x00003004                _DYNAMIC
+                0x000030d4                . = (. DATA_SEGMENT_RELRO_END 0x0)
+
+.got            0x000030d4       0x84
+ *(.got.plt)
+ .got.plt       0x000030d4       0x70 debug/HeyzapMarmalade_platform.os
+                0x000030d4                _GLOBAL_OFFSET_TABLE_
+ *(.got)
+ .got           0x00003144       0x14 debug/HeyzapMarmalade_platform.os
+
+.data           0x00003158        0x0
+                0x00003158                __data_start = .
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x00003158        0x0 debug/HeyzapMarmalade_platform.os
+ .data          0x00003158        0x0 debug/HeyzapMarmalade.os
+ .data          0x00003158        0x0 debug/HeyzapMarmalade_register.os
+ .data          0x00003158        0x0 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .data          0x00003158        0x0 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(edk_helpers.o)
+
+.data1
+ *(.data1)
+                0x00003158                _edata = .
+                0x00003158                PROVIDE (edata, .)
+                0x00003158                __bss_start = .
+                0x00003158                __bss_start__ = .
+
+.bss            0x00003158     0x1a38
+ *(.dynbss)
+ .dynbss        0x00000000        0x0 debug/HeyzapMarmalade_platform.os
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x00003158       0x10 debug/HeyzapMarmalade_platform.os
+ .bss           0x00003168        0x0 debug/HeyzapMarmalade.os
+ .bss           0x00003168        0x0 debug/HeyzapMarmalade_register.os
+ .bss           0x00003168     0x1a28 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+                0x00003168                g_DebugGlobals
+ .bss           0x00004b90        0x0 /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(edk_helpers.o)
+ *(COMMON)
+                0x00004b90                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0x00004b90                _bss_end__ = .
+                0x00004b90                __bss_end__ = .
+                0x00004b90                . = ALIGN (0x4)
+                0x00004b90                . = ALIGN (0x4)
+                0x00004b90                __end__ = .
+                0x00004b90                _end = .
+                0x00004b90                PROVIDE (end, .)
+                0x00004b90                . = DATA_SEGMENT_END (.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x8c
+ *(.comment)
+ .comment       0x00000000       0x12 debug/HeyzapMarmalade_platform.os
+ .comment       0x00000012       0x12 debug/HeyzapMarmalade.os
+ .comment       0x00000024       0x12 debug/HeyzapMarmalade_register.os
+ .comment       0x00000036       0x2b /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .comment       0x00000061       0x2b /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(edk_helpers.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0xb8
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x78 debug/HeyzapMarmalade_platform.os
+ .debug_aranges
+                0x00000078       0x20 debug/HeyzapMarmalade.os
+ .debug_aranges
+                0x00000098       0x20 debug/HeyzapMarmalade_register.os
+
+.debug_pubnames
+                0x00000000      0x2d3
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000      0x1d3 debug/HeyzapMarmalade_platform.os
+ .debug_pubnames
+                0x000001d3       0x85 debug/HeyzapMarmalade.os
+ .debug_pubnames
+                0x00000258       0x7b debug/HeyzapMarmalade_register.os
+
+.debug_info     0x00000000     0x5e58
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000     0x5a89 debug/HeyzapMarmalade_platform.os
+ .debug_info    0x00005a89      0x150 debug/HeyzapMarmalade.os
+ .debug_info    0x00005bd9      0x27f debug/HeyzapMarmalade_register.os
+
+.debug_abbrev   0x00000000      0x48b
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x273 debug/HeyzapMarmalade_platform.os
+ .debug_abbrev  0x00000273       0xd7 debug/HeyzapMarmalade.os
+ .debug_abbrev  0x0000034a      0x141 debug/HeyzapMarmalade_register.os
+
+.debug_line     0x00000000      0x470
+ *(.debug_line)
+ .debug_line    0x00000000      0x2b0 debug/HeyzapMarmalade_platform.os
+ .debug_line    0x000002b0       0xba debug/HeyzapMarmalade.os
+ .debug_line    0x0000036a      0x106 debug/HeyzapMarmalade_register.os
+
+.debug_frame    0x00000000      0x398
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x228 debug/HeyzapMarmalade_platform.os
+ .debug_frame   0x00000228       0x9c debug/HeyzapMarmalade.os
+ .debug_frame   0x000002c4       0xd4 debug/HeyzapMarmalade_register.os
+
+.debug_str      0x00000000     0x4b77
+ *(.debug_str)
+ .debug_str     0x00000000     0x48af debug/HeyzapMarmalade_platform.os
+                               0x4a22 (size before relaxing)
+ .debug_str     0x000048af       0xb4 debug/HeyzapMarmalade.os
+                                0x224 (size before relaxing)
+ .debug_str     0x00004963      0x214 debug/HeyzapMarmalade_register.os
+                                0x367 (size before relaxing)
+
+.debug_loc      0x00000000      0x505
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x330 debug/HeyzapMarmalade_platform.os
+ .debug_loc     0x00000330       0xb8 debug/HeyzapMarmalade.os
+ .debug_loc     0x000003e8      0x11d debug/HeyzapMarmalade_register.os
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x00000000       0xa8
+ *(.debug_ranges)
+ .debug_ranges  0x00000000       0xa8 debug/HeyzapMarmalade_platform.os
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+OUTPUT(/Users/james/src/heyzap/mobile-sdk/marmalade-sdk/lib/android/libHeyzapMarmalade_d.so elf32-littlearm)
+
+.ARM.attributes
+                0x00000000       0x2a
+ .ARM.attributes
+                0x00000000       0x28 debug/HeyzapMarmalade_platform.os
+ .ARM.attributes
+                0x00000028       0x28 debug/HeyzapMarmalade.os
+ .ARM.attributes
+                0x00000050       0x28 debug/HeyzapMarmalade_register.os
+ .ARM.attributes
+                0x00000078       0x2c /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(IwDebug.o)
+ .ARM.attributes
+                0x000000a4       0x2c /Developer/Marmalade/5.2/s3e/edk/lib/android/libedk.a(edk_helpers.o)

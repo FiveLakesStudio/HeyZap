@@ -1,0 +1,42 @@
+## Heyzap Mobile SDK 2.0.11
+
+* Fixed an issue where the Heyzap checkin popup would stretch sometimes on tablets
+
+
+## Heyzap Mobile SDK 2.0.10
+
+* Change iOS to use to not use UDID
+
+
+## Heyzap Mobile SDK 2.0.9
+
+* Make sure the Heyzap checkin button isn't hidden on the android emulator
+
+
+## Heyzap Mobile SDK 2.0.8
+
+* Changed android notification icon to match the game's icon
+
+
+## Heyzap Mobile SDK 2.0.7
+
+* Fixed compiler flag bug affecting armv6 iOS SDK, fixed bug in unity build
+
+
+## Heyzap Mobile SDK 2.0.6
+
+* Android NDK support
+* Fix to ensure android sdk code always runs on the ui thread if needed
+
+
+## Heyzap Mobile SDK 2.0.5
+
+* Add support for iOS3 in SDK
+* Add support for arm6 in iOS SDK
+
+
+## Heyzap Mobile SDK 2.0.4
+
+* Add support for manually setting name of your game in the iOS SDK
+* Documentation for iOS3 support
+* Fix bug where images would not appear in checkin dialog on Android Unity3d games

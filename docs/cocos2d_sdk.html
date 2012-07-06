@@ -1,0 +1,591 @@
+<html >
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+    <title>Heyzap Mobile SDK</title> 
+
+    <style>
+    * {
+        margin:0;
+        padding:0;
+    }
+
+    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+        margin: 0;
+        padding: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        border: 0;
+        outline: 0;
+        background: transparent;
+    }
+
+    html, body {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        height: 100%;
+    }
+
+    ol, ul {
+        list-style: none;
+    }
+
+    blockquote, q {
+        quotes: none;
+    }
+
+    :focus {
+        outline: 0;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    .group:after {
+        content: "."; 
+        display: block; 
+        height: 0; 
+        clear: both; 
+        visibility: hidden;
+    }
+
+    body {
+        font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', serif;
+        font-size: 62.5%;
+    }
+
+    ul {
+        list-style: disc;
+        margin-top: 10px;
+    }
+
+    ol {
+        list-style: decimal;
+    }
+
+    ul li, ol li {
+        margin-left: 30px;
+        margin-bottom: 3px;
+    }
+
+    ol li {
+        margin-bottom: 12px;
+    }
+
+    dt {
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    dd {
+        margin-bottom: 20px;
+        margin-left: 20px;
+        margin-top: 5px;
+    }
+
+    p {
+      margin: 20px 0;
+    }
+
+    blockquote {
+      padding-left: 20px;
+      font-style: italic;
+    }
+
+    #site-header {
+      color: #000;
+      text-align: center;
+      font-size: 3em;
+    }
+
+    #site-header a {
+      color: #000;
+      padding: 20px;
+      display: block;
+      text-decoration: none;
+    }
+
+    #wrap {
+        width: 700px;
+        margin: 0 auto;
+        font-size: 1.5em;
+        padding: 20px;
+    }
+
+    #header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #header h1 {
+        font-size: 1.8em;
+    }
+
+    #header h2 {
+        font-size: 1.1em;
+        font-weight: normal;
+    }
+
+    #share {
+      text-align: center;
+    }
+
+    #share ul {
+        width: 350px;
+        margin: 0 auto;
+    }
+
+    #share ul li {
+        list-style-type: none;
+        float: left;
+        margin: 0;
+        width: 110px;
+        text-align: center;
+    }
+
+    #post, #project {
+      margin-bottom: 40px;
+    }
+
+    #home h2, #post h2, #project h2 {
+      font-size: 1.3em;
+      margin: 30px 0 15px 0;
+    }
+
+    #home h3, #post h3, #project h3 {
+      margin: 25px 0 10px 0;
+    }
+
+    #home h4, #post h4, #project h4 {
+      margin: 5px 0 10px 0;
+      color: #666;
+      font-size: 0.9em;
+    }
+
+    .highlight {
+      border: 1px solid #ddd;
+      padding: 10px;
+      overflow: hidden;
+    }
+
+    .download-button {
+        background: #7fbf4d;
+        background: -moz-linear-gradient(0% 100% 90deg,#63a62f, #7fbf4d);
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7fbf4d), to(#63a62f));
+        border: 1px solid #63a62f;
+        border-bottom: 1px solid #5b992b;
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
+        border-radius: 8px;
+        -moz-box-shadow: inset 0 1px 0 0 #96ca6d;
+        -webkit-box-shadow: inset 0 1px 0 0 #96ca6d;
+        box-shadow: inset 0 1px 0 0 #96ca6d;
+        color: #fff;
+        font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1;
+        padding: 10px 20px;
+        text-align: center;
+        text-shadow: 0 -1px 0 #4c9021;
+    }
+
+    .download-button:hover {
+        background: #76b347;
+        background: -moz-linear-gradient(0% 100% 90deg,#5e9e2e, #76b347);
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#76b347), to(#5e9e2e));
+        -moz-box-shadow: inset 0 1px 0 0 #8dbf67;
+        -webkit-box-shadow: inset 0 1px 0 0 #8dbf67;
+        box-shadow: inset 0 1px 0 0 #8dbf67;
+        cursor: pointer;
+    }
+
+    .download-button:active {
+        border: 1px solid #5b992b;
+        border-bottom: 1px solid #538c27;
+        -moz-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eee;
+        -webkit-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eee;
+        box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eee;
+    }
+
+    .download-button a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .download-button em {
+        display: block;
+        margin-top: 8px;
+        font-weight: normal;
+        font-size: 0.5em;
+    }
+
+    .section {
+        margin-bottom: 30px;
+    }
+
+    .section h3 {
+        margin-bottom: 3px;
+    }
+
+    .social-grill {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .social-grill span {
+        line-height: 32px;
+        margin-right: 20px;
+        font-size: 0.9em;
+    }
+
+    .social-grill img {
+        width: 32px;
+        height: 32px;
+        vertical-align: middle;
+    }
+
+    .social-grill a {
+        text-decoration: none;
+        color: black;
+    }
+
+    #instant-demo {
+        float: left;
+        width: 48%;
+    }
+
+    #demo-details {
+        font-size: 0.8em;
+    }
+
+    #download {
+        float: right;
+        margin: 30px 0;
+        width: auto;
+    }
+
+    #github {
+        text-align: center;
+        font-size: 0.9em;
+        margin: 5px 0;
+    }
+
+    pre  {
+      padding: 5px;
+      background-color: #eee;
+      line-height: 2em;
+    }
+
+    .highlight .hll { background-color: #ffffcc }
+    .highlight  { background: #f8f8f8; }
+    .highlight .c { color: #408080; font-style: italic } /* Comment */
+    .highlight .err { border: 1px solid #FF0000 } /* Error */
+    .highlight .k { color: #008000; font-weight: bold } /* Keyword */
+    .highlight .o { color: #666666 } /* Operator */
+    .highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+    .highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+    .highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
+    .highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+    .highlight .gd { color: #A00000 } /* Generic.Deleted */
+    .highlight .ge { font-style: italic } /* Generic.Emph */
+    .highlight .gr { color: #FF0000 } /* Generic.Error */
+    .highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+    .highlight .gi { color: #00A000 } /* Generic.Inserted */
+    .highlight .go { color: #808080 } /* Generic.Output */
+    .highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+    .highlight .gs { font-weight: bold } /* Generic.Strong */
+    .highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+    .highlight .gt { color: #0040D0 } /* Generic.Traceback */
+    .highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+    .highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+    .highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+    .highlight .kp { color: #008000 } /* Keyword.Pseudo */
+    .highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+    .highlight .kt { color: #B00040 } /* Keyword.Type */
+    .highlight .m { color: #666666 } /* Literal.Number */
+    .highlight .s { color: #BA2121 } /* Literal.String */
+    .highlight .na { color: #7D9029 } /* Name.Attribute */
+    .highlight .nb { color: #008000 } /* Name.Builtin */
+    .highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+    .highlight .no { color: #880000 } /* Name.Constant */
+    .highlight .nd { color: #AA22FF } /* Name.Decorator */
+    .highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+    .highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+    .highlight .nf { color: #0000FF } /* Name.Function */
+    .highlight .nl { color: #A0A000 } /* Name.Label */
+    .highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+    .highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+    .highlight .nv { color: #19177C } /* Name.Variable */
+    .highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+    .highlight .w { color: #bbbbbb } /* Text.Whitespace */
+    .highlight .mf { color: #666666 } /* Literal.Number.Float */
+    .highlight .mh { color: #666666 } /* Literal.Number.Hex */
+    .highlight .mi { color: #666666 } /* Literal.Number.Integer */
+    .highlight .mo { color: #666666 } /* Literal.Number.Oct */
+    .highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+    .highlight .sc { color: #BA2121 } /* Literal.String.Char */
+    .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+    .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+    .highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+    .highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+    .highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+    .highlight .sx { color: #008000 } /* Literal.String.Other */
+    .highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+    .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+    .highlight .ss { color: #19177C } /* Literal.String.Symbol */
+    .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+    .highlight .vc { color: #19177C } /* Name.Variable.Class */
+    .highlight .vg { color: #19177C } /* Name.Variable.Global */
+    .highlight .vi { color: #19177C } /* Name.Variable.Instance */
+    .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
+    </style>
+</head>
+
+<body>
+    <div id="site-header">
+        <h1><a href="/">Heyzap Mobile SDK</a></h1>
+    </div>
+
+    <div id="wrap">
+      <div id="project">
+        <h2 id="heyzap-cocos2d-ios-sdk">Heyzap Cocos2D (iOS) SDK</h2>
+
+<p>The Heyzap SDK allows players to check-in to your game, driving viral
+growth and promoting your game on our social graph.
+For typical applications, the Heyzap SDK will only take a few minutes to 
+integrate.</p>
+
+<p>Find out more about the Heyzap Mobile SDKs <a href="http://www.heyzap.com/mobile/sdk">here</a>.</p>
+
+<h2 id="requirements">Requirements</h2>
+
+<ul>
+  <li>The Heyzap SDK supports iOS 3.0+</li>
+  <li>The Heyzap SDK requires internet access to pull information about your game.</li>
+</ul>
+
+<h2 id="sdk-contents">SDK Contents</h2>
+
+<p>The Cocos2D SDK can be found in the Heyzap SDK zip file under the <code>cocos2d-sdk</code> 
+directory. The <code>cocos2d-sdk</code> directory contains:</p>
+
+<ul>
+  <li><strong><code>Heyzap.framework</code></strong>: Headers and code for the Heyzap SDK.</li>
+  <li><strong><code>Heyzap.bundle</code></strong>: Graphical resources for the Heyzap SDK checkin buttons.</li>
+  <li><strong><code>HeyzapCocos2D</code></strong>: The Heyzap Cocos2D helper library</li>
+</ul>
+
+<h2 id="step-1-install--load-the-heyzap-sdk">Step 1: Install &amp; Load the Heyzap SDK</h2>
+
+<ul>
+  <li>
+    <p>Drag <code>Heyzap.framework</code>, <code>Heyzap.bundle</code> and <code>HeyzapCocos2D</code> from the 
+<em>cocos2d-sdk</em> folder in the Heyzap SDK zip into the Xcode project 
+navigator.</p>
+
+    <p><img src="images/cocos2d-drag-xcode.png" alt="Drag Files to XCode" /></p>
+  </li>
+  <li>
+    <p>Import the Heyzap SDK in your application delegate file:</p>
+
+    <pre><code>#import "HeyzapCocos2DSDK.h"
+</code></pre>
+  </li>
+  <li>
+    <p>Initialize the Heyzap SDK by adding the following line to your application 
+delegate file inside <code>application:didFinishLaunchingWithOptions</code>:</p>
+
+    <pre><code>[HeyzapCocos2DSDK startHeyzapWithAppId: @"YOUR-APP-STORE-ID-HERE"];
+</code></pre>
+
+    <p>It is important that you to replace <em>YOUR-APP-STORE-ID-HERE</em> with your 
+game&rsquo;s App Store ID. See <a href="#obtaining-an-app-store-id">Obtaining an App Store ID</a> 
+for details. The call to <code>startHeyzapWithAppId</code> should be done as soon as
+possible after your game is initialized to ensure that check-ins run smoothly.</p>
+  </li>
+  <li>
+    <p>Ensure your app can be opened by a custom URL scheme. Heyzap needs the URL
+scheme so that we can switch back to your game after players check in.
+See <a href="#setting-up-a-url-scheme">Setting Up A URL Scheme</a> for details.</p>
+  </li>
+  <li>
+    <p>You are now ready to add checkin buttons to your game!</p>
+  </li>
+</ul>
+
+<h2 id="step-2-prompt-user-to-check-in-after-levels-high-scores-etc">Step 2: Prompt User To Check-in After Levels, High Scores etc.</h2>
+
+<p>Allow users to check-in with their score or level achievements. This
+normally goes at the end of a level and is an effective way to let them share
+their scores/levels with their friends.</p>
+
+<ul>
+  <li>
+    <p>Import the Heyzap SDK:</p>
+
+    <pre><code>#import "HeyzapCocos2DSDK.h"
+</code></pre>
+  </li>
+  <li>
+    <p>Add a check-in button to your screen:</p>
+
+    <pre><code>// Create a menu item image button
+CCMenuItem *heyzap = [CCMenuItemImage itemFromNormalImage:@"Heyzap.bundle/btn-sdk-checkin.png" 
+                                            selectedImage:@"Heyzap.bundle/btn-sdk-checkin-down.png"
+                                                   target:self
+                                                 selector:@selector(heyzapCheckinTapped:)];
+
+// Set x and y to be the position on screen where you want to place the button
+heyzap.position = ccp(x,y);
+
+// Add it to the menu (or use your existing menu instead)
+CCMenu *Menu = [CCMenu menuWithItems:button, nil];
+[self addChild:heyzapMenu];
+</code></pre>
+  </li>
+  <li>
+    <p>Create the selector function to handle the tap event on the checkin button:</p>
+
+    <pre><code>- (void)heyzapCheckinTapped: (id)sender {
+    [[HeyzapCocos2DSDK sharedSDK] checkinWithMessage: @"I just completed level 5!"];
+}
+</code></pre>
+  </li>
+  <li>
+    <p>If you prefer not to use the <code>CCMenuItemImage</code> class, make sure you call
+<code>checkinWithMessage</code> as above when the user taps the checkin image.</p>
+  </li>
+</ul>
+
+<h2 id="step-3-show-a-checkin-button-on-your-games-menu-screen">Step 3: Show a Checkin Button on Your Game&rsquo;s Menu Screen</h2>
+
+<ul>
+  <li>
+    <p>Import the Heyzap SDK:</p>
+
+    <pre><code>#import "HeyzapCocos2DSDK.h"
+</code></pre>
+  </li>
+  <li>
+    <p>Add a check-in button to your screen:</p>
+
+    <pre><code>// Create a menu item image button
+CCMenuItem *heyzap = [CCMenuItemImage itemFromNormalImage:@"Heyzap.bundle/btn-sdk-checkin.png" 
+                                            selectedImage:@"Heyzap.bundle/btn-sdk-checkin-down.png"
+                                                   target:self
+                                                 selector:@selector(heyzapCheckinTapped:)];
+
+// Set x and y to be the position on screen where you want to place the button
+heyzap.position = ccp(x,y);
+
+// Add it to the menu (or use your existing menu instead)
+CCMenu *Menu = [CCMenu menuWithItems:button, nil];
+[self addChild:heyzapMenu];
+</code></pre>
+  </li>
+  <li>
+    <p>Create the selector function to handle the tap event on the checkin button:</p>
+
+    <pre><code>- (void)heyzapCheckinTapped: (id)sender {
+    [[HeyzapCocos2DSDK sharedSDK] checkin];
+}
+</code></pre>
+  </li>
+  <li>
+    <p>If you prefer not to use the <code>CCMenuItemImage</code> class, make sure you call
+<code>checkinWithMessage</code> as above when the user taps the checkin image.</p>
+  </li>
+</ul>
+
+<h2 id="step-4-sdk-icon-overlay">Step 4: SDK Icon Overlay</h2>
+
+<p>To highlight to players that your game has integrated with Heyzap, we recommend
+overlaying the Heyzap icon onto your game icon. This will increase the
+installs of your game, highlighting to potential players that they can check into
+Heyzap from within your game. </p>
+
+<p>In order to generate the icons, claim your game through
+the <a href="http://www.heyzap.com/mobile_developers/dashboard">Heyzap developer dashboard</a>. Once you have claimed
+your game, view that games details and then click &ldquo;SDK Icon Overlays&rdquo;. From here you can
+download the icons.</p>
+
+<h2 id="step-5-testing--releasing">Step 5: Testing &amp; Releasing</h2>
+
+<p>Testing your game with Heyzap before release is essential. This will ensure 
+the game fully leverages the Heyzap features from the instant it is live.</p>
+
+<p>Make sure to test your game with both the Heyzap application installed, and
+with Heyzap uninstalled, since the check-in process will be slightly different
+for each of those states.</p>
+
+<p>Please also send a copy of your game after integrating with the Heyzap SDK to
+<a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#105;&#110;&#116;&#101;&#103;&#114;&#097;&#116;&#105;&#111;&#110;&#064;&#104;&#101;&#121;&#122;&#097;&#112;&#046;&#099;&#111;&#109;">&#105;&#110;&#116;&#101;&#103;&#114;&#097;&#116;&#105;&#111;&#110;&#064;&#104;&#101;&#121;&#122;&#097;&#112;&#046;&#099;&#111;&#109;</a> so we can help with the testing process and so we can 
+better promote your game.</p>
+
+<p>For iOS please send a test build of the app to <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#105;&#110;&#116;&#101;&#103;&#114;&#097;&#116;&#105;&#111;&#110;&#064;&#104;&#101;&#121;&#122;&#097;&#112;&#046;&#099;&#111;&#109;">&#105;&#110;&#116;&#101;&#103;&#114;&#097;&#116;&#105;&#111;&#110;&#064;&#104;&#101;&#121;&#122;&#097;&#112;&#046;&#099;&#111;&#109;</a>. The
+UDID to build for is <em>d504e5f2cc0d481c01d88ad6d71fc2870d1fa508</em>. You can use
+<a href="http://www.testflightapp.com">http://www.testflightapp.com</a> to help, or simply build directly.</p>
+
+<h2 id="advanced-sdk-usage">Advanced SDK Usage</h2>
+
+<h3 id="choosing-which-url-scheme-is-used-by-heyzap">Choosing Which URL Scheme is Used By Heyzap</h3>
+
+<p>If your game defines multiple URL schemes and you wish to choose a specific 
+one to use when Heyzap switches back to your game, you can set this 
+at any point prior to the checkin button being pressed:</p>
+
+<pre><code>[[HeyzapCocos2DSDK sharedSDK] setAppURL: [NSURL URLWithString: @"coolapp://"]];
+</code></pre>
+
+<h3 id="displaying-a-custom-application-name">Displaying a custom application name</h3>
+
+<p>To change the name of the application used inside of the SDK, set the application name
+at any point prior to the checkin button being pressed:</p>
+
+<pre><code>[[HeyzapCocos2DSDK sharedSDK] setAppName: @"&lt;YOUR APP NAME&gt;"];
+</code></pre>
+
+<h2 id="app-store-ids--url-schemes">App Store IDs &amp; URL Schemes</h2>
+
+<h3 id="obtaining-an-app-store-id">Obtaining an App Store ID</h3>
+
+<p>The App Store ID is a large number assigned to your app in iTunes Connect by
+Apple. You can get an App Store ID by completing all the steps necessary to 
+submit an app short of uploading your application.</p>
+
+<h3 id="setting-up-a-url-scheme">Setting Up A URL Scheme</h3>
+
+<p>The Heyzap SDK requires your game to configure a URL scheme so that we can
+relaunch your app after players check in. You can specify any URL scheme you
+want in your app.</p>
+
+<ul>
+  <li>
+    <p>To add a URL scheme in Xcode, go to the Info section of your build target
+settings and click <em>Add</em> in the bottom right of the screen. From there you
+will be presented with a menu, from which you select <em>Add URL type</em>.</p>
+
+    <p><img src="images/url-scheme-settings.png" alt="URL Scheme Settings" /></p>
+  </li>
+  <li>
+    <p>From there, you should specify the Identifier as <code>yourappname</code> and the URL
+scheme as <code>yourappname</code>. Make sure your chosen URL scheme contains no 
+spaces or special characters.</p>
+
+    <p><img src="images/url-scheme.png" alt="URL Scheme" /></p>
+  </li>
+</ul>
+
+<h2 id="additional-questions">Additional Questions?</h2>
+
+<p>If you have any additional questions about integrating with our SDK, please
+email <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#105;&#110;&#116;&#101;&#103;&#114;&#097;&#116;&#105;&#111;&#110;&#064;&#104;&#101;&#121;&#122;&#097;&#112;&#046;&#099;&#111;&#109;">&#105;&#110;&#116;&#101;&#103;&#114;&#097;&#116;&#105;&#111;&#110;&#064;&#104;&#101;&#121;&#122;&#097;&#112;&#046;&#099;&#111;&#109;</a> and we&rsquo;ll walk you through the process.</p>
+
+
+      </div>
+    </div>
+</body>
+</html>
